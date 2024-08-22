@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt - NPOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./imgs/cavera.icon" type="image/png">
+</head>
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <header>
+        <h1>ENCRYPT - NPOR</h1>
+    </header>
+
+    <div class="card">
+        <div class="button-group">
+            <button class="btn1" onclick="changeText('cript')">Criptografar</button>
+            <button class="btn" onclick="changeText('descript')">Descriptografar</button>
+        </div>
+
+        <div id="card-content" class="card-content">
+            <div class="card-info">
+                <h2>INSTRUÇÕES BÁSICAS DE USO</h2><br>
+                <p style="text-align: justify;">
+                    PARA A UTILIZAÇÃO DAS FERRAMENTAS EXISTEM DOIS BOTÕES:<br>ㅤ• Criptografar: AO CLICAR NESSE BOTÃO, UMA NOVA TELA SERÁ ABERTA, ONDE HAVERÁ UMA CAIXA PARA DIGITAR SUA MENSAGEM EM TEXTO EM CLARO*. APÓS CONCLUIR A MENSAGEM, CLIQUE NO BOTÃO (ENVIAR), E A MENSAGEM SERÁ EXIBIDA CRIPTOGRAFADA* NA CAIXA LOGO ABAIXO DO BOTÃO (ENVIAR).<br>ㅤ• Descriptografar: AO CLICAR NESSE BOTÃO, UMA NOVA TELA SERÁ ABERTA, ONDE HAVERÁ UMA CAIXA PARA DIGITAR SUA MENSAGEM CRIPTOGRAFADA*. APÓS CONCLUIR A MENSAGEM, CLIQUE NO BOTÃO (ENVIAR), E A MENSAGEM SERÁ EXIBIDA EM TEXTO CLARO* NA CAIXA LOGO ABAIXO DO BOTÃO (ENVIAR).<br>
+                    OBS: ESTE PROGRAMA FOI DESENVOLVIDO PARA CRIPTOGRAFAR E DESCRIPTOGRAFAR MENSAGENS RECEBIDAS PELOS MEIOS DIGITAIS, TAIS COMO ZIMBRA SPED.
+                </p>
+            </div>
+            <div class="card-clock">
+                <img class="clock-img" src="./imgs/clock.png" alt="Clock" />
+                <div class="gdh">
+                    <h2>Grupo Data Hora</h2>
+                    <p id="time-display">00:00:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="cript" style="display: none;">
+            <div style="padding: 10px;">
+                <h3 >
+                    Escreva abaixo a mensagem para criptografia
+                </h3>
+                <textarea rows="4" cols="50" class="cript-input" type="text" id="criptInput" placeholder="Escreva a mensagem para criptografar" ></textarea>
+                <button class="btn-cript" onclick="criptFunction('btnCript')">ENVIAR</button>
+
+                <p id="cryptTXT"></p>
+
+                <div class="card-clock1">
+                    <img class="clock-img" src="./imgs/clock.png" alt="Clock" />
+                    <div class="gdh">
+                        <h2>Grupo Data Hora</h2>
+                        <p id="time-display">00:00:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="descript" style="display: none;">
+            <div style="padding: 10px;">
+                <h3 >
+                    Escreva abaixo a mensagem para descriptogtafia
+                </h3>
+                <textarea rows="4" cols="50" class="cript-input" type="text" id="descriptInput" placeholder="Escreva a mensagem para descriptografar" ></textarea>
+                <button class="btn-cript" onclick="descriptFunction('btnDescript')">ENVIAR</button>
+                <p id="descryptTXT"></p>
+
+                <div class="card-clock1">
+                    <img class="clock-img" src="./imgs/clock.png" alt="Clock" />
+                    <div class="gdh">
+                        <h2>Grupo Data Hora</h2>
+                        <p id="time-display">00:00:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <img class="npor-img" src="./imgs/npor.png" alt="NPOR" />
+    <script src="script.js"></script>
+</body>
+</html>
